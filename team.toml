@@ -1,0 +1,28 @@
+# Choose models and reasoning levels available to your account before installing.
+# These reproduce the reference setup; setting a name does not grant model access.
+[orchestrator]
+model = "gpt-6-astra"
+model_reasoning_effort = "xhigh"
+
+[delegation]
+max_concurrent_threads_per_session = 3
+
+[roles.dev_explorer]
+model = "gpt-6-luna"
+model_reasoning_effort = "high"
+
+[roles.dev_worker]
+model = "gpt-6.1-sol"
+model_reasoning_effort = "medium"
+
+[roles.dev_verifier]
+model = "gpt-6-luna"
+model_reasoning_effort = "high"
+
+[roles.dev_reviewer]
+model = "gpt-6.1-sol"
+model_reasoning_effort = "high"
+
+[roles.dev_deep_worker]
+model = "gpt-6.1-sol"
+model_reasoning_effort = "xhigh"
