@@ -19,6 +19,15 @@ suite also covers conflicting edits, concurrent saves during preparation and
 commit, rollback, malformed state, symlink destinations, and a moved checkout.
 Installer and test hashes remained unchanged during independent verification.
 
+The verification-guidance update was also checked on 2026-10-14: all 22 tests
+passed again with zero skips, all five agent TOML files parsed, and independent
+review found no actionable issues. A separate temporary-target check passed 23
+assertions while upgrading an installation of baseline `a0f66bf` to the revised
+instructions, checking rendered content, preserved settings, repeat-install
+idempotency, and uninstall restoration. Source hashes stayed fixed during that
+check. These checks validate packaging and installation of the guidance; they do
+not establish future agents' compliance with it.
+
 A preliminary verification harness incorrectly required removal of an empty
 `[agents]` table after uninstall. The accepted behavior retains that table when
 needed to preserve a later user comment. The corrected check confirmed parseable

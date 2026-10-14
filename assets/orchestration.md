@@ -14,7 +14,7 @@ Role files in `{{CODEX_HOME}}/agents/` pin both model and effort. Select the nam
 
 Before spawning, supply:
 
-- Objective, observable acceptance criteria, and the relevant user constraints.
+- Objective, observable acceptance criteria with checkable verification targets, and the relevant user constraints.
 - Absolute checkout path, current source/baseline, applicable instruction paths, and canonical implementations to inspect. Every agent reads applicable global guidance, the installed shared standard, and applicable local guidance.
 - Owned files or modules; whether source edits are allowed; dependencies on other tasks. A shared checkout includes others' changes, which must be preserved.
 - Verification commands already established, expected assertions, runtime/setup needs, and known failures or gaps. Unknown commands are a discovery task, never guessed validation.

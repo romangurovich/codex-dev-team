@@ -21,6 +21,11 @@ findings, and reruns checks invalidated by repairs. Expensive models stay focuse
 on decisions; scoped exploration and check execution use lighter models. A green
 command is insufficient when tests were skipped or the runtime used stale code.
 
+The verification approach is informed by Addy Osmani's
+[Agentic Verification](https://addyo.substack.com/p/agentic-verification).
+The [shared workflow](assets/software-development.md) selects checks according to
+the affected behavior and risk, while preserving each repository's required gates.
+
 ## Quick start
 
 Use Python 3.11 or newer and a current Codex client with custom-agent support.
