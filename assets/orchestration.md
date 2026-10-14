@@ -2,6 +2,8 @@
 
 Use this playbook for software implementation, debugging, refactoring, and review. Read `{{CODEX_HOME}}/dev-team/software-development.md` for the shared development and verification standard. Repository and path-specific instructions supply local conventions and required gates.
 
+Apply the shared standard's **Optional Hindsight memory** section before nontrivial work, when dispatching hints or reporting candidate lessons, and after verification.
+
 ## Assign work deliberately
 
 The primary agent owns requirements, design decisions, decomposition, integration, escalation, and final acceptance. For nontrivial changes, delegate bounded implementation to a worker and use a separate reviewer. Keep trivial, low-risk edits in the primary when dispatch would cost more than the work. Delegate independent exploration or check execution when useful; every task does not need every role.

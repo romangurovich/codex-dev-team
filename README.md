@@ -123,6 +123,16 @@ the conflict before updating. Unrelated changes to settings and instructions can
 remain. If you already have manually created `dev_*` agents, relocate those files
 after backing them up before adopting this installer.
 
+## Optional Hindsight integration
+
+The [shared workflow](assets/software-development.md#optional-hindsight-memory)
+can use an existing Hindsight service when authorized private project routing and
+access are available. Keep the optional `hindsight.local.md` in your Codex home,
+outside the source checkout and separate from installer-managed files. The
+installer does not create or manage that file or your personal MCP configuration.
+Start a fresh Codex session after changing MCP configuration. Without verified
+routing or reachable access, the workflow continues with its normal checks.
+
 ## Updates and removal
 
 After updating this repository, preview and reinstall using your chosen model

@@ -7,3 +7,6 @@ team.local.toml
 .env
 .env.*
 !.env.example
+.hindsight.toml
+hindsight.local.md
+.hindsight/
