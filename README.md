@@ -17,8 +17,8 @@ flowchart LR
 ```
 
 The orchestrator assigns exclusive file ownership, collects evidence, resolves
-findings, and reruns checks invalidated by repairs. Expensive models stay focused
-on decisions; scoped exploration and check execution use lighter models. A green
+findings, and reruns checks invalidated by repairs. Higher reasoning effort stays
+focused on decisions and difficult repairs; exploration and check execution use lighter models. A green
 command is insufficient when tests were skipped or the runtime used stale code.
 
 The verification approach is informed by Addy Osmani's
@@ -57,7 +57,7 @@ The reference configuration is:
 
 | Responsibility | Model | Reasoning |
 | --- | --- | --- |
-| Orchestrator | GPT-6 Astra | Extra high |
+| Orchestrator | GPT-6.1 Sol | Extra high |
 | `dev_worker` | GPT-6.1 Sol | Medium |
 | `dev_reviewer` | GPT-6.1 Sol | High |
 | `dev_explorer` | GPT-6 Luna | High |
@@ -68,7 +68,8 @@ The default limit is three subagents, excluding the primary. Subagents are leave
 Trivial, low-risk changes may stay in the primary. After two unsuccessful repair
 attempts, the orchestrator escalates to the deeper worker or handles the issue.
 
-For accounts that have GPT-6 Sol but not GPT-6.1 Sol:
+For accounts that have GPT-6 Sol but not GPT-6.1 Sol, the alternative preset keeps
+Astra as orchestrator and uses GPT-6 Sol for implementation and review:
 
 ```bash
 python scripts/setup.py plan --models examples/team-gpt6-sol.toml

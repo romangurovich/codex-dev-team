@@ -28,6 +28,12 @@ idempotency, and uninstall restoration. Source hashes stayed fixed during that
 check. These checks validate packaging and installation of the guidance; they do
 not establish future agents' compliance with it.
 
+The default-model update to GPT-6.1 Sol with extra-high reasoning passed the same
+22-test suite with zero skips and 27 independent configuration/lifecycle checks.
+Generated role pins and the orchestrator table matched `team.toml`; the installed
+user configuration changed only its top-level model value. Interactive UI model
+selection and backend model identity were not exercised by these checks.
+
 A preliminary verification harness incorrectly required removal of an empty
 `[agents]` table after uninstall. The accepted behavior retains that table when
 needed to preserve a later user comment. The corrected check confirmed parseable

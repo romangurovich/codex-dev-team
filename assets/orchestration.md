@@ -8,7 +8,7 @@ The primary agent owns requirements, design decisions, decomposition, integratio
 
 {{MODEL_TABLE}}
 
-Role files in `{{CODEX_HOME}}/agents/` pin both model and effort. Select the named role when the spawn tool supports custom agents. When it exposes only model/effort, read the role file, pass its instructions in the assignment, and explicitly select its model and effort. When overriding models requires a fresh context (for example `fork_turns="none"`), send a self-contained assignment. Do not silently use the primary's expensive model for routine execution; if the requested model is unavailable, report the limitation and use an available cheaper model when adequate.
+Role files in `{{CODEX_HOME}}/agents/` pin both model and effort. Select the named role when the spawn tool supports custom agents. When it exposes only model/effort, read the role file, pass its instructions in the assignment, and explicitly select its model and effort. When overriding models requires a fresh context (for example `fork_turns="none"`), send a self-contained assignment. Keep the assigned model and effort for routine execution; if the requested model is unavailable, report the limitation and use an available cheaper model when adequate.
 
 ## Dispatch contract
 

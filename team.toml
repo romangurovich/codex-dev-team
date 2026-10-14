@@ -1,7 +1,7 @@
 # Choose models and reasoning levels available to your account before installing.
 # These reproduce the reference setup; setting a name does not grant model access.
 [orchestrator]
-model = "gpt-6-astra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "xhigh"
 
 [delegation]
